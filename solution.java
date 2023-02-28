@@ -1,24 +1,21 @@
+// you can also use imports, for example:
+// import java.util.*;
+
+// you can write to stdout for debugging purposes, e.g.
+// System.out.println("this is a debug message");
+
 class Solution {
-    public int solution(int N) {
-        int maxGap = 0;
-        int currentGap = -1;
-        
-        while (N > 0) {
-            if (N % 2 == 0) {
-                if (currentGap != -1) {
-                    currentGap++;
-                }
-            } else {
-                if (currentGap != -1) {
-                    maxGap = Math.max(maxGap, currentGap);
-                    currentGap = 0;
-                } else {
-                    currentGap = 0;
-                }
+    public int solution(int[] A) {
+        int N = A.length;
+        boolean[] isPresent = new boolean[N + 1];
+
+        for (int a : A) {
+            if (a < 1 || a > N || isPresent[a]) {
+                return 0;
             }
-            N /= 2;
+            isPresent[a] = true;
         }
         
-        return maxGap;
+        return 1;
     }
 }
