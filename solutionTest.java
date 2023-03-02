@@ -1,24 +1,15 @@
-import java.util.Arrays;
-import org.junit.Ignore;
 import org.junit.Test;
-//ask @Ignore
-public class SolutionTest {
-    private Solution solution = new Solution();
+import org.junit.Ignore;
+import static org.junit.Assert.assertEquals;
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+@Test
+@DisplayName("smallest positive integer with negative int")
+public void smallestpositiveintegerwithnegativeint() {
+    Solution solution = new Solution();
+    int[] A = {-2, -4};
+    int expectedResult = 1;
+    int actualResult = solution.solution(A);
+    assertEquals(expectedResult, actualResult);
+}
 
-    @Ignore
-    @Test
-    public void testlInput() {
-        int[] expectedOutput = {3, 2, 2, 4, 2};
-        int[] input = {3, 4, 4, 6, 1, 4, 4};
-        int N = 5;
-        int[] output = solution.solution(N, input);
-        assertArrayEquals(expectedOutput, output);
-    }
-    @Ignore
-    @Test
-    public void testPlusOne() {
-        int[] input = {N+1, N+1, N+1, N+1};
-        int[] expectedOutput = {0, 0, 0, 0, 0};
-        int[] output = solution.solution(N, input);
-        assertArrayEquals(expectedOutput, output);
-    }
