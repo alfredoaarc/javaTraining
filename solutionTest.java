@@ -1,15 +1,15 @@
-import org.junit.Test;
 import org.junit.Ignore;
-import static org.junit.Assert.assertEquals;
-import org.junit.runner.RunWith;
-import org.junit.runners.Suite;
-@Test
-@DisplayName("smallest positive integer with negative int")
-public void smallestpositiveintegerwithnegativeint() {
-    Solution solution = new Solution();
-    int[] A = {-2, -4};
-    int expectedResult = 1;
-    int actualResult = solution.solution(A);
-    assertEquals(expectedResult, actualResult);
-}
+import org.junit.Test;
 
+public class SolutionTest {
+
+    @Test
+    public void testCountDivisibleNumbers() {
+        Solution solution = new Solution();
+
+        assertEquals(0, solution.countDivisibleNumbers(2, 4, 6));
+
+        assertEquals(1, solution.countDivisibleNumbers(2, 6, 5));
+
+        assertEquals(2, solution.countDivisibleNumbers(5, 10, 1));
+    }
