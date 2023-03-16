@@ -6,16 +6,13 @@ import org.junit.jupiter.api.AfterEach;
 public class SolutionTest {
 
     @Test
-    public void getMaximalProduct() {
+    public void testMaximalProductOfTriplet() {
         Solution solution = new Solution();
-        int[] inputNumbers = {1, 2, 3, 4, 5};
-        int expectedMaximalProduct = 60;
+        int[] inputNumbers = {-10, -5, 0, 2, 4, 6, 8, 10};
+        int expectedMaximalProduct = 800;
 
-        int actualMaximalProduct = solution.getMaximalProduct(inputNumbers);
+        int actualMaximalProduct = solution.solution(inputNumbers);
 
         assertEquals(expectedMaximalProduct, actualMaximalProduct);
     }
-
-
-
 }
